@@ -44,7 +44,11 @@ Devise.setup do |config|
   # from others authentication tools as :clearance_sha1, :authlogic_sha512 (then
   # you should set stretches above to 20 for default behavior) and :restful_authentication_sha1
   # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
+<<<<<<< HEAD
   # config.encryptor = :bcrypt
+=======
+  config.encryptor = :bcrypt
+>>>>>>> 3ed9f48e5318b7dd353645f883cd01a6f68563ad
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = "44e417424977274844dfcec41e31e800cc5cafe041e3350cc70bce1dd327ccf413b1367e9122387b0e9e9e9e5f766b5bf949f5f67b39ee0ecc18ba21a14b550e"
@@ -127,10 +131,26 @@ Devise.setup do |config|
   # should add them to the navigational formats lists. Default is [:html]
   # config.navigational_formats = [:html, :iphone]
 
+<<<<<<< HEAD
   config.omniauth :twitter, 'cw1asd8WaPxMIMgAUMX9Uw', 'uLLN9LOk4oYHiwsCUueIO0vQIDsx9xtcUZW71pSKbg'
+=======
+  # config.omniauth :yahoo, "ea6bda8a7524541dd015c80d36d1713b0b7da3ab", "dj0yJmk9NEZ4eTVLYTVuVjE0JmQ9WVdrOVVFUnJWa294TkdVbWNHbzlOek00TXpJd05qSS0mcz1jb25zdW1lcnNlY3JldCZ4PWIx"
+>>>>>>> 3ed9f48e5318b7dd353645f883cd01a6f68563ad
   # ==> Warden configuration
   # If you want to use other strategies, that are not (yet) supported by Devise,
   # you can configure them inside the config.warden block. The example below
   # allows you to setup OAuth, using http://github.com/roman/warden_oauth
   #
+<<<<<<< HEAD
+=======
+  config.warden do |manager|
+    manager.oauth(:yahoo) do |yahoo|
+      yahoo.app_id = 'PDkVJ14e'
+      yahoo.consumer_secret = 'ea6bda8a7524541dd015c80d36d1713b0b7da3ab'
+      yahoo.consumer_key  = 'dj0yJmk9NEZ4eTVLYTVuVjE0JmQ9WVdrOVVFUnJWa294TkdVbWNHbzlOek00TXpJd05qSS0mcz1jb25zdW1lcnNlY3JldCZ4PWIx'
+      yahoo.options :site => 'http://bookm.arq.br/'
+    end
+    manager.default_strategies(:scope => :user).unshift :yahoo_oauth
+  end
+>>>>>>> 3ed9f48e5318b7dd353645f883cd01a6f68563ad
 end
