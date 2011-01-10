@@ -8,7 +8,7 @@ gem 'rails', '= 3.0.3'
 gem "sqlite3-ruby", "= 1.3.1", :require => "sqlite3"
 gem 'haml', "~> 3.0.25"
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
-gem 'omniauth'
+gem 'omniauth', '~> 0.1.6'
 gem "oa-oauth", :require => "omniauth/oauth"
 
 # Use unicorn as the web server
@@ -31,5 +31,5 @@ gem "oa-oauth", :require => "omniauth/oauth"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'mongrel'
+  gem 'mongrel', '= 1.1.5'
 end
