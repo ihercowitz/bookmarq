@@ -31,5 +31,5 @@ gem "oa-oauth", :require => "omniauth/oauth"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'mongrel', '= 1.1.5'
+  gem 'mongrel', :require => false if RUBY_VERSION.include? "1.8"  
 end
